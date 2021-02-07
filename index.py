@@ -13,8 +13,8 @@ def home():
 def traduzir(frase):
     
     translator = Translator()
-    return frase
     detec=translator.detect(frase).lang
+    return frase
     destino = 'pt' if detec!='pt' else 'en'
     translation = translator.translate(frase, dest=destino)
     
