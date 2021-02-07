@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <input id='b1' type='button' value='speech' onclick="speech()">
+        <script>
+        // new SpeechSynthesisUtterance object
+        /*
+        function speech(){
+            let utter = new SpeechSynthesisUtterance();
+            utter.lang = 'en-US';
+            utter.text = 'Hello World';
+            utter.volume = 1;
+
+            // speak
+            window.speechSynthesis.speak(utter);
+        }
+        */
+        window.addEventListener("DOMContentLoaded", () => {
+            const button = document.getElementById("button");
+            const result = document.getElementById("result");
+            const main = document.getElementsByTagName("main")[0];
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+            if (typeof SpeechRecognition === "undefined") {
+                button.remove();
+                const message = document.getElementById("message");
+                message.removeAttribute("hidden");
+                message.setAttribute("aria-hidden", "false");
+            } else {
+    document.write('okkkkkkkkkkkkkkkkkkkkkk')
+  }
+});
+        </script>
+</body>
+</html>
+
