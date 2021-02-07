@@ -8,6 +8,9 @@ app = Flask(__name__)
 dictobjs={}
 
 
+@app.route('/')
+def home():
+    return ''
 
 @app.route('/traduzir/<frase>')
 def traduzir(frase):
