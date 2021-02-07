@@ -4,11 +4,12 @@ from googletrans import Translator
 
 app = Flask(__name__)
 
-dictobjs={}
 
+@app.route('/')
+def home():
+    return ''
 
-
-@app.route('/<frase>')
+@app.route('/traduzir/<frase>')
 def traduzir(frase):
     translator = Translator()
     detec=translator.detect(frase).lang
