@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from translate import Translator
-from langdetect import detect
 
 
 app = Flask(__name__)
