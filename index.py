@@ -15,7 +15,7 @@ def traduzir(frase):
     detec=translator.detect(frase).lang
     destino = 'pt' if detec!='pt' else 'en'
     translation = translator.translate(frase, dest=destino)
-    return translation.text
+    return str('ok')
 
 #app.run()
 
