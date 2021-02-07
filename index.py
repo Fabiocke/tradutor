@@ -16,6 +16,7 @@ def traduzir(frase):
     translation = translator.translate(frase, dest=destino)
     return translation.text
 
+#app.run()
 
 
 
