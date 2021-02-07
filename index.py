@@ -1,25 +1,23 @@
 from flask import Flask, render_template
-from googletrans import Translator
+from translate import Translator
+from langdetect import detect
 
 
 app = Flask(__name__)
 
+dictobjs={}
 
-@app.route('/')
-def home():
-    return ''
+
 
 @app.route('/traduzir/<frase>')
 def traduzir(frase):
-    
-    translator = Translator()
-  #  detec=translator.detect(frase).lang
-  #  destino = 'pt' if detec!='pt' else 'en'
-  #  translation = translator.translate(frase, dest=destino)
-    translation = translator.translate(frase, dest='en')
-    return translation.text
+
+
+    translator = Translator(from_lang='pt', to_lang='en')
+    translation = translator.translate(frase)
+
+    return translation
 
 #app.run()
-
 
 
