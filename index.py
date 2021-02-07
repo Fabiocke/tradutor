@@ -11,11 +11,11 @@ dictobjs={}
 def home():
     return ''
 
-@app.route('/traduzir/<frase>')
-def traduzir(frase):
+@app.route('/traduzir/<lfrom>/<lto>/<frase>')
+def traduzir(lfrom,lto,frase):
 
 
-    translator = Translator(from_lang='pt', to_lang='en')
+    translator = Translator(from_lang=lfrom, to_lang=lto)
     translation = translator.translate(frase)
 
     return translation
